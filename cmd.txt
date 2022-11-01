@@ -1,0 +1,63 @@
+NestJS do Zero com TypeORM, Mongoose, Prisma e Swagger
+ref: https://www.udemy.com/course/nestjs-do-zero/
+
+
+nest new devtraining
+npm run start:dev
+nest g controller courses
+
+If dont want create test:
+nest g controller courses --no-spec
+
+And if prefere put the controller into a folder:
+nest g controller module/courses
+
+To confere before execute and inplement the news files inser the flag "--dry-run":
+nest g controller courses --dry-run
+
+
+@ResponseMapper(UserDTO)
+@RolesGuards()
+
+
+nest g service courses
+nest g module courses
+nest g class courses/dto/create-course.dto --no-spec
+nest g class courses/dto/update-course.dto --no-spec
+npm i class-validator class-transformer
+npm i @nestjs/mapped-types
+npm i typeorm @nestjs/typeorm pg
+
+nest g module database
+nest g class courses/entities/tag.entity --no-spec
+
+type migration:create -n 
+type migration:run 
+type migration:revert
+
+
+permission to execute commands
+chmod +x .docker/entrypoint.sh
+
+
+docker-compose -h
+docker-compose up
+docker-compose start
+docker-compose stop
+docker ps
+
+docker-compose exec app ls -la
+docker-compose exec app pwd
+
+
+docker-compose exec app bash
+    npx typeorm migration:create -n CreateCoursesTable
+    exit
+
+    npm install uuid
+    npm i --save-dev @types/uuid
+
+
+
+Tests:
+npm test
